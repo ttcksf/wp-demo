@@ -12,7 +12,7 @@
                     <?php
                     // 投稿に画像が添付されているかどうか
                         if(has_post_thumbnail()):
-                            // 投稿のサムネイルを表示
+                            // 投稿のサムネイルをimgタグで表示、タグがなくても大丈夫
                             the_post_thumbnail();
                         endif;
                     ?>
