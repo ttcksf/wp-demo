@@ -1,5 +1,6 @@
 <?php get_header();?>
     <main>
+    <i class="fa-solid fa-icons"></i>
         <section class="section postbox">
             <div class="postbox_inner inner">
                 <div class="cards">
@@ -7,6 +8,7 @@
                         <a href="#">
                             <div class="card_img">
                                 <span>コンテンツ</span>
+                                <i class="fas fa-search"></i>
                             </div>
                             <div class="card_text">
                                 <h2>Excepteur sint occaecat.</h2>
