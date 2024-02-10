@@ -19,7 +19,9 @@
         </label>
         <div class="header_top">
             <div class="header_inner">
-                <h1 class="header_title"><a href="./index.html">＠LIFEハックチャンネル</a></h1>
+                <h1 class="header_title"><a href="./index.html">＠LIFEハックチャンネル</a>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/prof.png" style="width: 24px;" alt="">
+            </h1>
             </div>
             <form action="#" method="post">
                 <input type="text" name="keyword" size="40" placeholder="検索">
