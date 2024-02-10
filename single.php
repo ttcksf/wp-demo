@@ -9,6 +9,13 @@
                     <h2>long&Big Title</h2>
                 </div>
                 <div class="single_eyecatching">
+                    <?php
+                    // 投稿に画像が添付されているかどうか
+                        if(has_post_thumbnail()):
+                            // 投稿のサムネイルを表示
+                            the_post_thumbnail();
+                        endif;
+                    ?>
                 </div>
                 <div class="single_content">
                     <p>
