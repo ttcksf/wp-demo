@@ -9,7 +9,7 @@
                                 <span>コンテンツ</span>
                             </div>
                             <div class="card_text">
-                                <h2>Excepteur sint occaecat.</h2>
+                                <h2 style="font-family: 'Protest Revolution', sans-serif;">Excepteur sint occaecat.</h2>
                                 <p>
                                     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
                                 </p>
