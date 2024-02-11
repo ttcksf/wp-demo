@@ -10,18 +10,12 @@
                 </div>
                 <div class="single_eyecatching">
                     <?php
-                    // 投稿に画像が添付されているかどうか
+                        // カスタムサイズで表示する
                         if(has_post_thumbnail()):
-                            // 投稿のサムネイルをimgタグで表示、タグがなくても大丈夫
-                            // the_post_thumbnail();
-                            // WPは画像をアップすると自動で3種類のサイズを用意してくれる(設定→メディアから微調整できる*ファイル名の数字は変えられない)
-                            // the_post_thumbnail('thumbnail');
-                            // class(デフォはwp-post-image)など属性は配列にして第二引数に入れる
-                            $attr = array(
-                                'class' => 'img-item'
-                            );
-                            the_post_thumbnail('thumbnail', $attr);
-                        // アイキャッチ画像のデフォルト画像があるときはelseに書く
+                            // the_post_thumbnail('custom-thumbnail-one');
+                            the_post_thumbnail('custom-thumbnail-two');
+                        // 切り抜き画像が存在することで効果が得られるので、プログラム変更後にアップした画像のみなので以前にアップしていた画像に指定しても切り抜きされないので正確に反映できない
+                            
                         else:
                             echo '<img style="width: 150px; height: 150px;" src=' . get_stylesheet_directory_uri() . '/img/no_image.jpg />';
                         endif;
