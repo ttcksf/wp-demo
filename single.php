@@ -13,7 +13,17 @@
                     // 投稿に画像が添付されているかどうか
                         if(has_post_thumbnail()):
                             // 投稿のサムネイルをimgタグで表示、タグがなくても大丈夫
-                            the_post_thumbnail();
+                            // the_post_thumbnail();
+                            // WPは画像をアップすると自動で3種類のサイズを用意してくれる(設定→メディアから微調整できる*ファイル名の数字は変えられない)
+                            // the_post_thumbnail('thumbnail');
+                            // class(デフォはwp-post-image)など属性は配列にして第二引数に入れる
+                            $attr = array(
+                                'class' => 'img-item'
+                            );
+                            the_post_thumbnail('thumbnail', $attr);
+                        // アイキャッチ画像のデフォルト画像があるときはelseに書く
+                        else:
+                            echo '<img style="width: 150px; height: 150px;" src=' . get_stylesheet_directory_uri() . '/img/no_image.jpg />';
                         endif;
                     ?>
                 </div>
