@@ -1,7 +1,7 @@
 <?php
 // WPのテーマ機能を利用するためのadd_theme_supportを使う
   function theme_setup(){
-    // RSSフィードを有効化する（データ収集はWPが自動でやってくれる）
+    // RSSの配信を許可する（データ収集はWPが自動でやってくれるのでサイト側での許可のみが未対応になっているため）
     // 件数は設定→表示設定から変更できる
     add_theme_support('automatic-feed-links');
     // 記事のタイトルをtitleタグに自動挿入する
