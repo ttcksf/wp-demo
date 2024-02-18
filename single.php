@@ -3,7 +3,13 @@
         <section class="section postbox single">
             <div class="postbox_inner inner">
                 <div class="single_time">
-                    <h3>yyyy/mm/dd</h3>
+                    <!-- 設定→一般設定から変更できる -->
+                    <!-- 公開日 -->
+                    <!-- <h3><?php echo get_the_date();?></h3> -->
+                    <!-- 一般設定にないものは引数で指定 -->
+                    <h3><?php echo get_the_date('Y/m/d l');?></h3>
+                    <!-- 公開時刻 -->
+                    <p><?php echo get_the_time();?></p>
                 </div>
                 <div class="single_title">
                     <h2>long&Big Title</h2>
