@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/b4cc5d2f25.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/reset.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
     <title>Document</title>
     <?php wp_head();?>
 </head>
