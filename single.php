@@ -7,6 +7,10 @@
                 </div>
                 <div class="single_title">
                     <h2>long&Big Title</h2>
+                    <!-- テンプレートファイルまでのリンクを持ったaタグとして出力してくれる -->
+                    <p><?php the_tags();?></p>
+                    <!-- 特定のセレクタで囲むことも可能。アイコンのiタグを入れたり、CSSを当てるclassをつける -->
+                    <p><?php the_tags('<span class="tag-item">','</span><span class="tag-item">','</span>');?></p>
                 </div>
                 <div class="single_eyecatching">
                 </div>
