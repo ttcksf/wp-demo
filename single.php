@@ -1,6 +1,7 @@
 <?php get_header();?>
     <main>
         <section class="section postbox single">
+        <!-- ポストループの中で使う -->
         <?php if(have_posts()):
                 while(have_posts()):
                     the_post();
