@@ -9,6 +9,15 @@
                     <h2>long&Big Title</h2>
                 </div>
                 <div class="single_eyecatching">
+                    <?php
+                        // サムネイルがあるとTrue,ないとFalseを返す
+                        if(has_post_thumbnail()):
+                            // サイズを引数で指定する
+                            the_post_thumbnail("custom-thumbnail-two");
+                        else:
+                            echo '<img style="width: 150px; height: 150px;" src=' . get_stylesheet_directory_uri() . '/img/no_image.jpg />';
+                        endif;
+                    ;?>
                 </div>
                 <div class="single_content">
                     <p>

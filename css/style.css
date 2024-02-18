@@ -1,17 +1,20 @@
 @charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   font-size: 62.5%;
 }
 
 body {
-  font-family: "メイリオ", "Meiryo", "arial", "游ゴシック Medium","Yu Gothic Medium","游ゴシック体", YuGothic, Georgia, Times , Times New Roman, sans-serif;
+  font-family: "メイリオ", "Meiryo", "arial", "游ゴシック Medium",
+    "Yu Gothic Medium", "游ゴシック体", YuGothic, Georgia, Times,
+    Times New Roman, sans-serif;
   font-weight: 400;
   color: #333333;
   font-size: 1.6rem;
@@ -35,7 +38,10 @@ a:hover {
   opacity: 0.6;
 }
 
-a:link, a:visited, a:hover, a:active {
+a:link,
+a:visited,
+a:hover,
+a:active {
   color: #333333;
 }
 
@@ -96,19 +102,19 @@ textarea {
 }
 
 ::-webkit-input-placeholder {
-  color: #D3D3D3;
+  color: #d3d3d3;
 }
 
 :-ms-input-placeholder {
-  color: #D3D3D3;
+  color: #d3d3d3;
 }
 
 ::-ms-input-placeholder {
-  color: #D3D3D3;
+  color: #d3d3d3;
 }
 
 ::placeholder {
-  color: #D3D3D3;
+  color: #d3d3d3;
 }
 
 /* common */
@@ -124,8 +130,8 @@ textarea {
   display: inline-block;
   line-height: 48px;
   border-bottom: 4px solid #707070;
-  font-family: "游ゴシック Medium","Yu Gothic Medium","游ゴシック体", YuGothic;
-  font-size: 3.0rem;
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
+  font-size: 3rem;
   font-weight: bold;
 }
 
@@ -141,19 +147,19 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .pagenation .page-numbers {
   width: 40px;
   height: 40px;
   line-height: 38px;
-  color: #2699FB;
+  color: #2699fb;
   font-family: "arial";
   font-weight: bold;
   font-size: 1.7rem;
-  border: 2px solid #2699FB;
+  border: 2px solid #2699fb;
   border-radius: 50%;
   text-align: center;
 }
@@ -172,10 +178,10 @@ textarea {
 }
 
 .post_search input[type="text"] {
-  font-family: "游ゴシック Medium","Yu Gothic Medium","游ゴシック体", YuGothic;
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
   font-weight: bold;
   color: #333333;
-  background-color: #D3D3D3;
+  background-color: #d3d3d3;
   border: 0px;
   border-radius: 4px;
   padding: 15px 18px;
@@ -206,16 +212,16 @@ textarea {
 }
 
 .select_pref::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 45%;
   right: 20px;
   -webkit-transform: translate(0, -50%) rotate(-45deg);
-          transform: translate(0, -50%) rotate(-45deg);
+  transform: translate(0, -50%) rotate(-45deg);
   width: 10px;
   height: 10px;
-  border-left: 2px solid #2699FB;
-  border-bottom: 2px solid #2699FB;
+  border-left: 2px solid #2699fb;
+  border-bottom: 2px solid #2699fb;
 }
 
 @media screen and (min-width: 960px) {
@@ -247,7 +253,7 @@ textarea {
   top: 50%;
   left: 14px;
   -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  transform: translate(0, -50%);
 }
 
 .bar {
@@ -292,7 +298,7 @@ textarea {
 
 .menu_checkbox:checked ~ .menu {
   -webkit-transform: translateX(0);
-          transform: translateX(0);
+  transform: translateX(0);
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -303,14 +309,14 @@ textarea {
 
 .menu_checkbox:checked ~ .menu_hamburger > .bar::before {
   -webkit-transform: translateY(8px) rotate(-45deg);
-          transform: translateY(8px) rotate(-45deg);
+  transform: translateY(8px) rotate(-45deg);
   top: -8px;
   background: #ffffff;
 }
 
 .menu_checkbox:checked ~ .menu_hamburger > .bar::after {
   -webkit-transform: translateY(-8px) rotate(45deg);
-          transform: translateY(-8px) rotate(45deg);
+  transform: translateY(-8px) rotate(45deg);
   bottom: -8px;
   background: #ffffff;
 }
@@ -323,7 +329,7 @@ textarea {
 
 /* header */
 .header {
-  font-family: "游ゴシック Medium","Yu Gothic Medium","游ゴシック体", YuGothic;
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
   position: fixed;
   top: 0;
   left: 0;
@@ -344,16 +350,16 @@ textarea {
   top: 50%;
   right: 38px;
   -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  transform: translate(0, -50%);
   width: 148px;
   display: none;
 }
 
 .header_top form input[type="text"] {
-  font-family: "游ゴシック Medium","Yu Gothic Medium","游ゴシック体", YuGothic;
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
   font-weight: bold;
   color: #333333;
-  background-color: #D3D3D3;
+  background-color: #d3d3d3;
   border: 0px;
   border-radius: 4px;
   padding: 15px 18px;
@@ -384,7 +390,7 @@ textarea {
   height: 100vh;
   background-color: #333333;
   -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  transform: translateX(-100%);
   -webkit-transition: 0.3s;
   transition: 0.3s;
   z-index: 100;
@@ -392,7 +398,7 @@ textarea {
 
 .menu_checkbox:checked ~ .header_bottom {
   -webkit-transform: translateX(0);
-          transform: translateX(0);
+  transform: translateX(0);
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -412,11 +418,11 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: relative;
 }
 
@@ -448,8 +454,8 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-bottom: 32px;
 }
 
@@ -488,7 +494,7 @@ textarea {
     display: block;
     position: initial;
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     height: initial;
     padding: 0;
   }
@@ -507,8 +513,8 @@ textarea {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     padding: 24px 0;
   }
   .header_nav-1 {
@@ -516,8 +522,8 @@ textarea {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    -ms-flex-pack: start;
+    justify-content: start;
     font-size: 1.8rem;
     margin-bottom: 0;
   }
@@ -543,11 +549,11 @@ textarea {
 
 /* footer */
 .footer {
-  font-family: "游ゴシック Medium","Yu Gothic Medium","游ゴシック体", YuGothic;
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
 }
 
 .footer_top {
-  background-color: #D3D3D3;
+  background-color: #d3d3d3;
 }
 
 .footer_top .footer_nav {
@@ -571,7 +577,7 @@ textarea {
 .footer_top .footer_nav-2 li span {
   padding: 9px 15px;
   width: 70%;
-  font-size: 2.0rem;
+  font-size: 2rem;
   font-weight: normal;
 }
 
@@ -582,11 +588,11 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: #ffffff;
   color: #333333;
   font-size: 2.1rem;
@@ -599,9 +605,9 @@ textarea {
 }
 
 .footer_top .footer_signature {
-  color: #2699FB;
+  color: #2699fb;
   background-color: #ffffff;
-  border: 1px solid #D3D3D3;
+  border: 1px solid #d3d3d3;
   padding: 37px 24px 88px;
 }
 
@@ -610,8 +616,8 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .footer_top .footer_signature ul li {
@@ -646,8 +652,8 @@ textarea {
   left: -80px;
   top: 50%;
   -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-  content: '';
+  transform: translate(0, -50%);
+  content: "";
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -655,7 +661,7 @@ textarea {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #F1F9FF;
+  background-color: #f1f9ff;
 }
 
 .footer_top .footer_signature .signature_text {
@@ -666,14 +672,14 @@ textarea {
 }
 
 .footer_top .footer_signature .signature_text p {
-  font-family: Georgia, Times , Times New Roman;
+  font-family: Georgia, Times, Times New Roman;
   font-style: italic;
-  font-size: 2.0rem;
+  font-size: 2rem;
   line-height: 1.5;
 }
 
 .footer_bottom {
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #333333;
   padding: 8px 0 16px;
   text-align: center;
@@ -707,7 +713,7 @@ textarea {
   }
   .footer_top .footer_nav-1 a {
     color: #333333;
-    font-size: 2.0rem;
+    font-size: 2rem;
     font-weight: normal;
     text-align: left;
   }
@@ -747,8 +753,8 @@ textarea {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #D3D3D3;
-  border: 1px solid #95989A;
+  background-color: #d3d3d3;
+  border: 1px solid #95989a;
   position: relative;
 }
 
@@ -764,19 +770,19 @@ textarea {
   left: 30px;
   font-weight: bold;
   font-size: 1.2rem;
-  color: #FFFFFF;
+  color: #ffffff;
   -webkit-text-stroke: 1px #707070;
 }
 
 .postbox .cards .card_text {
   width: 100%;
   padding: 30px;
-  border: 1px solid #95989A;
+  border: 1px solid #95989a;
 }
 
 .postbox .cards .card_text h2 {
   font-weight: bold;
-  font-size: 2.0rem;
+  font-size: 2rem;
   margin-bottom: 10px;
 }
 
@@ -789,7 +795,7 @@ textarea {
 .postbox .cards .card:hover {
   cursor: pointer;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -803,19 +809,19 @@ textarea {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .postbox .cards .card {
-    width: calc((100% - 20px *2 )/3);
+    width: calc((100% - 20px * 2) / 3);
     margin: 0 0 65px;
   }
   .postbox .cards:after {
     content: "";
     display: block;
-    width: calc((100% - 20px *2 )/3);
+    width: calc((100% - 20px * 2) / 3);
   }
 }
 
@@ -837,8 +843,8 @@ textarea {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #D3D3D3;
-  border: 1px solid #95989A;
+  background-color: #d3d3d3;
+  border: 1px solid #95989a;
   position: relative;
 }
 
@@ -865,33 +871,33 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 18px 0;
 }
 
 .profile .card_text .name h2 {
   -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
+  -ms-flex-order: 1;
+  order: 1;
   font-weight: bold;
-  font-size: 3.0rem;
+  font-size: 3rem;
 }
 
 .profile .card_text .name h3 {
   -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
+  -ms-flex-order: 2;
+  order: 2;
   font-weight: bold;
   font-size: 1.6rem;
 }
 
 .profile .card_text .detail {
   padding: 25px 20px 10px;
-  border: 1px solid #95989A;
+  border: 1px solid #95989a;
   min-height: 420px;
 }
 
@@ -919,8 +925,8 @@ textarea {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #D3D3D3;
-    border: 1px solid #95989A;
+    background-color: #d3d3d3;
+    border: 1px solid #95989a;
     position: relative;
   }
   .profile .card_img:before {
@@ -936,7 +942,7 @@ textarea {
     font-size: 1.2rem;
   }
   .profile .card_text {
-    border: 1px solid #95989A;
+    border: 1px solid #95989a;
     padding: 18px 29px;
     width: calc(100% - 300px);
   }
@@ -945,25 +951,25 @@ textarea {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     padding: 0;
     margin-bottom: 27px;
   }
   .profile .card_text .name h2 {
     -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    -ms-flex-order: 2;
+    order: 2;
     font-size: 2.6rem;
   }
   .profile .card_text .name h3 {
     -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    -ms-flex-order: 1;
+    order: 1;
     font-size: 1.6rem;
   }
   .profile .card_text .detail {
@@ -973,7 +979,7 @@ textarea {
     min-height: initial;
   }
   .profile .card_text .detail p {
-    font-size: 2.0rem;
+    font-size: 2rem;
     line-height: 1.5;
     color: #707070;
   }
@@ -1015,8 +1021,8 @@ textarea {
   display: inline-block;
   line-height: 48px;
   border-bottom: 4px solid #707070;
-  font-family: "游ゴシック Medium","Yu Gothic Medium","游ゴシック体", YuGothic;
-  font-size: 3.0rem;
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
+  font-size: 3rem;
   font-weight: bold;
 }
 
@@ -1041,8 +1047,9 @@ textarea {
     display: inline-block;
     line-height: 48px;
     border-bottom: 4px solid #707070;
-    font-family: "游ゴシック Medium","Yu Gothic Medium","游ゴシック体", YuGothic;
-    font-size: 3.0rem;
+    font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体",
+      YuGothic;
+    font-size: 3rem;
     font-weight: bold;
   }
   .search .cards {
@@ -1155,7 +1162,7 @@ textarea {
 
 .single_time h3 {
   font-family: "メイリオ", "Meiryo";
-  font-size: 2.0rem;
+  font-size: 2rem;
   font-weight: bold;
   text-align: center;
   color: #333333;
@@ -1166,8 +1173,8 @@ textarea {
 }
 
 .single_title h2 {
-  font-family: "游ゴシック Medium","Yu Gothic Medium","游ゴシック体", YuGothic;
-  font-size: 5.0rem;
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
+  font-size: 5rem;
   font-weight: bold;
   text-align: center;
   color: #333333;
@@ -1182,7 +1189,7 @@ textarea {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #7FC4FD;
+  background-color: #7fc4fd;
 }
 
 .single_content {
@@ -1263,7 +1270,7 @@ textarea {
   .movie .movie_cards {
     width: 120%;
     -webkit-transform: translate(-8%, 0);
-            transform: translate(-8%, 0);
+    transform: translate(-8%, 0);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

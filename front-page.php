@@ -9,8 +9,6 @@
                             the_post();
                     ?>
                     <div class="card">
-                        <!-- single.phpにいきたいときはaタグのhrefにパーマリンクを挿入すると自動でパスを出力してくれる -->
-                        <a href="<?php the_permalink();?>">
                             <div class="card_img">
                                 <!-- ユーザーの「ブログの表示名」で表示される -->
                                 <!-- 複数いる場合は投稿画面で選択する -->
@@ -19,12 +17,16 @@
                                 <p><?php the_author_link();?></p>
                             </div>
                             <div class="card_text">
-                                <h2><?php the_title();?></h2>
+                                <h2>
+                                    <!-- single.phpにいきたいときはaタグのhrefにパーマリンクを挿入すると自動でパスを出力してくれる -->
+                                    <a href="<?php the_permalink();?>">
+                                    <?php the_title();?>
+                                </a>
+                                </h2>
                                 <p>
                                     <?php the_content();?>
                                 </p>
                             </div>
-                        </a>
                     </div>
                     <?php endwhile;
                         else:
@@ -38,15 +40,19 @@
             <div class="profile_inner inner">
                 <div class="card">
                     <div class="card_img">
+                        <!-- アバターのみユーザーがログインすることで変更できる -->
+                        <!-- ID、サイズ -->
+                        <?php echo get_avatar(2, 100);?>
                     </div>
                     <div class="card_text">
+                    <?php $userdata = get_userdata(2); ?>
                         <div class="name">
-                            <h2>山田太郎</h2>
-                            <h3>IT系フリーランス</h3>
+                            <h2><?php echo esc_html($userdata->display_name)?></h2>
+                            <h3><?php echo esc_html($userdata->email)?></h3>
                         </div>
                         <div class="detail">
                             <p>
-                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
+                            <?php echo esc_html($userdata->description)?>
                             </p>
                         </div>
                     </div>
