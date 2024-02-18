@@ -17,6 +17,7 @@
                 </div>
                 <div class="single_content">    
                     <?php the_content();?>
+                    <!-- 投稿画面で「改ページ」を挿入しておくとページネーションが挿入される -->
                     <?php
                         wp_link_pages();
                     ?>
