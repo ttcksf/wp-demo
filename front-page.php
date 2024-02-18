@@ -24,6 +24,7 @@
                                 </a>
                                 <p>
                                     <?php the_content();?>
+
                                 </p>
                             </div>
                     </div>
