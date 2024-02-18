@@ -7,6 +7,15 @@
                 </div>
                 <div class="single_title">
                     <h2>long&Big Title</h2>
+                    <!-- デフォルトは未分類がついている -->
+                    <!-- ulタグとliタグで出力される -->
+                    <!-- <?php the_category();?> -->
+                    <!-- 横並びにしたい時はカンマを入れるとulとliタグがなくなる -->
+                    <!-- <?php the_category(",");?> -->
+                    <!-- タイトルなどブロック要素の横に持っていきたいときは子要素にして引数をカンマにする -->
+                    <h2>long&Big Title
+                        <?php the_category(",");?>
+                    </h2>
                 </div>
                 <div class="single_eyecatching">
                 </div>
