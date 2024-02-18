@@ -9,8 +9,7 @@
                             the_post();
                     ?>
                     <div class="card">
-                        <!-- single.phpにいきたいときはaタグのhrefにパーマリンクを挿入すると自動でパスを出力してくれる -->
-                        <a href="<?php the_permalink();?>">
+                        
                             <div class="card_img">
                                 <!-- ユーザーの「ブログの表示名」で表示される -->
                                 <!-- 複数いる場合は投稿画面で選択する -->
@@ -19,12 +18,14 @@
                                 <p><?php the_author_link();?></p>
                             </div>
                             <div class="card_text">
-                                <h2><?php the_title();?></h2>
+                                <!-- single.phpにいきたいときはaタグのhrefにパーマリンクを挿入すると自動でパスを出力してくれる -->
+                                <a href="<?php the_permalink();?>">
+                                    <h2><?php the_title();?></h2>
+                                </a>
                                 <p>
                                     <?php the_content();?>
                                 </p>
                             </div>
-                        </a>
                     </div>
                     <?php endwhile;
                         else:
