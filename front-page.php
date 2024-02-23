@@ -8,6 +8,24 @@
                         while(have_posts()):
                             the_post();
                     ?>
+                    <?php
+                        // PHPだけを出力する
+                        $cat = get_category_by_slug("PHP");
+                        // var_dump($cat);
+                        $cat_id = $cat->term_id;
+                        $cat_link = get_category_link($cat_id);
+                    ?>
+                    <a href="<?php echo esc_url($cat_link);?>">PHPの一覧はこちら</a>
+                    
+                    <?php
+                        // カテゴリー一覧を出す
+                        $categories = get_categories();
+                        if(!empty($categories)):
+                    ?>
+                    <?php foreach($categories as $category): ?>
+                        <a href="<?php echo esc_url(get_category_link($category->term_id)); ?>"><?php echo $category->name; ?></a>
+                    <?php endforeach; ?>
+                    <?php  endif; ?>
                     <div class="card">
                             <div class="card_img">
                                 <p><?php the_author_link();?></p>
@@ -17,11 +35,6 @@
                                     <h2><?php the_title();?></h2>
                                 </a>
                                 <p>
-                                    <!-- 改ページなど特に指定がなければ抜粋文を使うと楽 -->
-                                    <!-- the_contentは全文出す仕様なので一覧ページでは使いにくいため -->
-                                    <!-- 投稿画面の右パネルから専用の抜粋文を指定することも可能 -->
-                                    <!-- 抜粋文の末尾はfunctions.phpで書く -->
-                                    <!-- <?php the_content();?> -->
                                     <?php the_excerpt();?>
                                 </p>
                             </div>
