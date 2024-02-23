@@ -1,6 +1,6 @@
 <?php get_header();?>
     <main>
-
+    <!-- 固定ページからスラッグに指定したページを作成しないと表示されない -->
         <section class="section contact">
             <div class="contact_inner inner">
                 <h2 class="section_title"><span>お問い合わせ</span></h2>
