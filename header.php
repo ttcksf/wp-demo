@@ -20,8 +20,11 @@
             <div class="header_inner">
                 <h1 class="header_title"><a href="./index.html">＠LIFEハックチャンネル</a></h1>
             </div>
-            <form action="#" method="post">
-                <input type="text" name="keyword" size="40" placeholder="検索">
+            <!-- 検索フォームの設置 -->
+            <form action="#" method="get">
+                <!-- value属性は検索キーワードを残すため -->
+                <input type="text" name="s" value="<?php the_search_query();?>">
+                <input type="submit" value="検索" />
             </form> 
         </div>
         <div class="header_bottom">

@@ -9,12 +9,10 @@
                             the_post();
                     ?>
                     <?php
-                        // タグの一覧を出す
                         $tags = get_tags();
                         if(!empty($tags)):
-                            // var_dump($tags);
                     ?>
-                    <?php foreach($tags as $tag): var_dump($tag); ?>
+                    <?php foreach($tags as $tag): ?>
                         <a href="<?php echo esc_url(get_tag_link($tag->term_id)); ?>"><?php echo $tag->name; ?></a>
                     <?php endforeach; ?>
                     <?php  endif; ?>
