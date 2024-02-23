@@ -10,20 +10,19 @@
                     ?>
                     <div class="card">
                             <div class="card_img">
-                                <!-- ユーザーの「ブログの表示名」で表示される -->
-                                <!-- 複数いる場合は投稿画面で選択する -->
-                                <!-- <p><?php the_author();?></p> -->
-                                <!-- 外部の寄稿者である時は会社HP、ブログサイトのURLをユーザー一覧に登録しておくことで外部リンクとして投稿者が表示される -->
                                 <p><?php the_author_link();?></p>
                             </div>
                             <div class="card_text">
-                                <!-- single.phpにいきたいときはaタグのhrefにパーマリンクを挿入すると自動でパスを出力してくれる -->
                                 <a href="<?php the_permalink();?>">
                                     <h2><?php the_title();?></h2>
                                 </a>
                                 <p>
-                                    <?php the_content();?>
-
+                                    <!-- 改ページなど特に指定がなければ抜粋文を使うと楽 -->
+                                    <!-- the_contentは全文出す仕様なので一覧ページでは使いにくいため -->
+                                    <!-- 投稿画面の右パネルから専用の抜粋文を指定することも可能 -->
+                                    <!-- 抜粋文の末尾はfunctions.phpで書く -->
+                                    <!-- <?php the_content();?> -->
+                                    <?php the_excerpt();?>
                                 </p>
                             </div>
                     </div>
