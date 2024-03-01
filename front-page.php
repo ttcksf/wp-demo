@@ -9,15 +9,12 @@
                             the_post();
                     ?>
                     <?php
-                        // タグの一覧を出す
-                        $tags = get_tags();
-                        if(!empty($tags)):
-                            // var_dump($tags);
+                        $tag = get_term_by('slug', 'wordpress', 'post_tag');
                     ?>
-                    <?php foreach($tags as $tag): var_dump($tag); ?>
-                        <a href="<?php echo esc_url(get_tag_link($tag->term_id)); ?>"><?php echo $tag->name; ?></a>
-                    <?php endforeach; ?>
-                    <?php  endif; ?>
+                    <?php 
+                        $tag_link = get_tag_link($tag->term_id);
+                    ?>
+                    <a href="<?php echo esc_url($tag_link);?>"><?php echo $tag->name;?></a>
                     <div class="card">
                             <div class="card_img">
                                 <p><?php the_author_link();?></p>
