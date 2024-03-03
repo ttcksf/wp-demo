@@ -42,6 +42,8 @@
             </div>
         </div>
         <div class="footer_bottom">
+            <!-- Atomフィード -->
+            <a style="color: #fff;" target="_blank" href="<?php bloginfo("atom_url");?>">RSS</a>
             <div class="footer_inner inner">
                 <small>Copyright - Yuichiro Adachi 2020 All Rights Reserved</small>
             </div>
