@@ -2,8 +2,7 @@
     <main>
         <section class="section postbox">
             <div class="postbox_inner inner">
-            <h1>カテゴリー一覧：<?php the_category(",");?></h1>
-            
+                <h1>カテゴリー名：<?php the_archive_title();?></h1>
                 <div class="cards">
                     <?php if(have_posts()):
                         while(have_posts()):
@@ -12,7 +11,7 @@
                     <div class="card">
                         <a href="<?php the_permalink();?>">
                             <div class="card_img">
-                                <span>コンテンツ</span>
+                                <span><?php the_archive_title();?></span>
                             </div>
                             <div class="card_text">
                                 <h2><?php the_title();?></h2>
