@@ -18,9 +18,11 @@
                             </div>
                         </a>
                     </div>
-                    <?php endwhile;
-                        else:
-                    ?>
+                    <?php endwhile;?>
+                    <?php else:?>
+                        <!-- どこの子要素に書くかでレイアウトがずれたりする -->
+                        <!-- もしくはCSSを当てておく -->
+                        <p>投稿がありません。</p>
                     <?php endif; ?>
                 </div>
             </div>

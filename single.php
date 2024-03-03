@@ -13,14 +13,25 @@
                     <h2><?php the_title();?></h2>
                 </div>
                 <div class="single_eyecatching">
+                    <!-- functions.phpでサムネ設定の追加 -->
+                    <!-- 投稿ごとにサムネが任意の場合の条件分岐 -->
+                    <?php 
+                        if (has_post_thumbnail()):
+                        $id = get_post_thumbnail_id();
+                        $img = wp_get_attachment_image_src($id);
+                    ?>
+                       <img src="<?php echo esc_url($img[0]);?>">
+                    <?php else: ?>
+                        <img src="<?php echo get_template_directory_uri();?>/img/no_image.jpg">
+                    <?php endif;?>
                 </div>
                 <div class="single_content">
                     <p><?php the_content();?></p>
                 </div>
             </div>
-            <?php endwhile;
-                else:
-            ?>
+            <?php endwhile;?>
+            <?php else:?>
+              
             <?php endif; ?>
         </section>
 
