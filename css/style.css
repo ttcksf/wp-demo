@@ -3,7 +3,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   font-size: 62.5%;
@@ -33,7 +34,10 @@ a:hover {
   opacity: 0.6;
 }
 
-a:link, a:visited, a:hover, a:active {
+a:link,
+a:visited,
+a:hover,
+a:active {
   color: #333333;
 }
 
@@ -91,7 +95,7 @@ textarea {
 }
 
 ::placeholder {
-  color: #D3D3D3;
+  color: #d3d3d3;
 }
 
 /* common */
@@ -125,11 +129,11 @@ textarea {
   width: 40px;
   height: 40px;
   line-height: 38px;
-  color: #2699FB;
+  color: #2699fb;
   font-family: "arial";
   font-weight: bold;
   font-size: 1.7rem;
-  border: 2px solid #2699FB;
+  border: 2px solid #2699fb;
   border-radius: 50%;
   text-align: center;
 }
@@ -148,7 +152,7 @@ textarea {
   font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
   font-weight: bold;
   color: #333333;
-  background-color: #D3D3D3;
+  background-color: #d3d3d3;
   border: 0px;
   border-radius: 4px;
   padding: 15px 18px;
@@ -169,8 +173,8 @@ textarea {
   transform: translate(0, -50%) rotate(-45deg);
   width: 10px;
   height: 10px;
-  border-left: 2px solid #2699FB;
-  border-bottom: 2px solid #2699FB;
+  border-left: 2px solid #2699fb;
+  border-bottom: 2px solid #2699fb;
 }
 
 @media screen and (min-width: 960px) {
@@ -295,7 +299,7 @@ textarea {
   font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
   font-weight: bold;
   color: #333333;
-  background-color: #D3D3D3;
+  background-color: #d3d3d3;
   border: 0px;
   border-radius: 4px;
   padding: 15px 18px;
@@ -434,7 +438,7 @@ textarea {
   font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
 }
 .footer_top {
-  background-color: #D3D3D3;
+  background-color: #d3d3d3;
 }
 .footer_top .footer_nav {
   padding: 50px 16px 42px;
@@ -471,9 +475,9 @@ textarea {
   margin-bottom: 0;
 }
 .footer_top .footer_signature {
-  color: #2699FB;
+  color: #2699fb;
   background-color: #ffffff;
-  border: 1px solid #D3D3D3;
+  border: 1px solid #d3d3d3;
   padding: 37px 24px 88px;
 }
 .footer_top .footer_signature ul {
@@ -515,7 +519,7 @@ textarea {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #F1F9FF;
+  background-color: #f1f9ff;
 }
 .footer_top .footer_signature .signature_text {
   margin: 0 auto;
@@ -530,10 +534,13 @@ textarea {
   line-height: 1.5;
 }
 .footer_bottom {
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #333333;
   padding: 8px 0 16px;
   text-align: center;
+}
+.footer_bottom a {
+  color: #ffffff !important;
 }
 .footer_bottom small {
   font-size: 1.4rem;
@@ -596,8 +603,8 @@ textarea {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #D3D3D3;
-  border: 1px solid #95989A;
+  background-color: #d3d3d3;
+  border: 1px solid #95989a;
   position: relative;
 }
 .postbox .cards .card_img:before {
@@ -611,13 +618,13 @@ textarea {
   left: 30px;
   font-weight: bold;
   font-size: 1.2rem;
-  color: #FFFFFF;
+  color: #ffffff;
   -webkit-text-stroke: 1px #707070;
 }
 .postbox .cards .card_text {
   width: 100%;
   padding: 30px;
-  border: 1px solid #95989A;
+  border: 1px solid #95989a;
 }
 .postbox .cards .card_text h2 {
   font-weight: bold;
@@ -670,8 +677,8 @@ textarea {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #D3D3D3;
-  border: 1px solid #95989A;
+  background-color: #d3d3d3;
+  border: 1px solid #95989a;
   position: relative;
 }
 .profile .card_img:before {
@@ -707,7 +714,7 @@ textarea {
 }
 .profile .card_text .detail {
   padding: 25px 20px 10px;
-  border: 1px solid #95989A;
+  border: 1px solid #95989a;
   min-height: 420px;
 }
 .profile .card_text .detail p {
@@ -732,8 +739,8 @@ textarea {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #D3D3D3;
-    border: 1px solid #95989A;
+    background-color: #d3d3d3;
+    border: 1px solid #95989a;
     position: relative;
   }
   .profile .card_img:before {
@@ -749,7 +756,7 @@ textarea {
     font-size: 1.2rem;
   }
   .profile .card_text {
-    border: 1px solid #95989A;
+    border: 1px solid #95989a;
     padding: 18px 29px;
     width: calc(100% - 300px);
   }
@@ -958,7 +965,7 @@ textarea {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #7FC4FD;
+  background-color: #7fc4fd;
 }
 .single_content {
   margin-bottom: 40px;
