@@ -3,71 +3,25 @@
         <section class="section postbox">
             <div class="postbox_inner inner">
                 <div class="cards">
+                    <?php if(have_posts()):
+                        while(have_posts()):
+                            the_post();
+                    ?>
                     <div class="card">
-                        <a href="#">
+                        <a href="<?php the_permalink();?>">
                             <div class="card_img">
                                 <span>コンテンツ</span>
                             </div>
                             <div class="card_text">
-                                <h2>Excepteur sint occaecat.</h2>
-                                <p>
-                                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
-                                </p>
+                                <h2><?php the_title();?></h2>
+                                <p><?php the_excerpt();?></p>
                             </div>
                         </a>
                     </div>
-                    <div class="card">
-                        <a href="#">
-                            <div class="card_img">
-                                <span>プログラミング</span>
-                            </div>
-                            <div class="card_text">
-                                <h2>Excepteur sint occaecat.</h2>
-                                <p>
-                                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="#">
-                            <div class="card_img">
-                                <span>プログラミング</span>
-                            </div>
-                            <div class="card_text">
-                                <h2>Excepteur sint occaecat.</h2>
-                                <p>
-                                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="#">
-                            <div class="card_img">
-                                <span>プログラミング</span>
-                            </div>
-                            <div class="card_text">
-                                <h2>Excepteur sint occaecat.</h2>
-                                <p>
-                                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="#">
-                            <div class="card_img">
-                                <span>プログラミング</span>
-                            </div>
-                            <div class="card_text">
-                                <h2>Excepteur sint occaecat.</h2>
-                                <p>
-                                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
-                                </p>
-                            </div>
-                        </a>
-                    </div>
+                    <?php endwhile;
+                        else:
+                    ?>
+                    <?php endif; ?>
                 </div>
             </div>
         </section>

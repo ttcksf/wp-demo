@@ -20,8 +20,8 @@
             <div class="header_inner">
                 <h1 class="header_title"><a href="./index.html">＠LIFEハックチャンネル</a></h1>
             </div>
-            <form action="#" method="post">
-                <input type="text" name="keyword" size="40" placeholder="検索">
+            <form action="#" method="get">
+            <input type="text" name="s" value="<?php the_search_query();?>" placeholder="検索">
             </form> 
         </div>
         <div class="header_bottom">
