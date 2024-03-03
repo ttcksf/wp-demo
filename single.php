@@ -1,6 +1,12 @@
 <?php get_header();?>
     <main>
         <section class="section postbox single">
+            <!-- Breadcrumb NavXT -->
+            <?php
+                if(function_exists("bcn_display")){
+                    bcn_display();
+                }
+            ?>
             <?php if(have_posts()):
                     while(have_posts()):
                         the_post();

@@ -43,7 +43,15 @@
         </div>
         <div class="footer_bottom">
             <!-- Atomフィード -->
-            <a style="color: #fff;" target="_blank" href="<?php bloginfo("atom_url");?>">RSS</a>
+            <a target="_blank" href="<?php bloginfo("atom_url");?>">RSS</a>
+            <p>
+                <?php
+                    // function_existsは引数に指定した関数が実行できる状態で存在しているか確認する（固定ページで）
+                    if(function_exists("the_privacy_policy_link")){
+                        the_privacy_policy_link();
+                    }
+                ?>
+            </p>
             <div class="footer_inner inner">
                 <small>Copyright - Yuichiro Adachi 2020 All Rights Reserved</small>
             </div>

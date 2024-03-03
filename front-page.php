@@ -2,6 +2,15 @@
     <main>
         <section class="section postbox">
             <div class="postbox_inner inner">
+                <!-- Breadcrumb NavXT -->
+                <!-- トップページは外す（ブログサイトならあり？） -->
+                <?php
+                    if(!is_front_page()){
+                        if(function_exists("bcn_display")){
+                            bcn_display();
+                        }
+                    }
+                ?>
                 <div class="cards">
                     <?php if(have_posts()):
                         while(have_posts()):

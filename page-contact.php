@@ -1,7 +1,15 @@
 <?php get_header();?>
     <main>
-
         <section class="section contact">
+            <!-- Breadcrumb NavXT -->
+            <!-- トップページは外す（ブログサイトならあり？） -->
+            <?php
+                if(!is_front_page()){
+                    if(function_exists("bcn_display")){
+                        bcn_display();
+                    }
+                }
+            ?>
             <div class="contact_inner inner">
                 <h2 class="section_title"><span>お問い合わせ</span></h2>
                 <form class="contact_form" action="#" method="POST" id="ss-form" target="hidden_iframe" onsubmit="submitted=true">
