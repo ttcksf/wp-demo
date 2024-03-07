@@ -47,6 +47,8 @@
             <p>
                 <?php
                     // function_existsは引数に指定した関数が実行できる状態で存在しているか確認する（固定ページで）
+                    // 設定→プライバシーのものを使用する場合であればスラッグの変更で修正は不要。
+                    // オリジナルで作りたいときにはpage.phpで作成してスラッグを踏まえたリンクを使用することになる
                     if(function_exists("the_privacy_policy_link")){
                         the_privacy_policy_link();
                     }
