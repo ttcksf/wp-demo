@@ -7,6 +7,9 @@
                 <?php endif;?>
             <?php endif;?>
             <div class="postbox_inner inner">
+
+                <h1><?php the_archive_title();?></h1>
+
                 <div class="cards">
                     <?php if(have_posts()):
                         while(have_posts()):

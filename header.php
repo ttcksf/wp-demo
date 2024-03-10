@@ -7,7 +7,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/reset.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
-    <title>Document</title>
+    
+    <title><?php bloginfo("name");?></title>
+    <meta name="description" content="<?php bloginfo("description");?>">
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri();?>/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri();?>/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri();?>/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="<?php echo get_template_directory_uri();?>/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="<?php echo get_template_directory_uri();?>/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <?php wp_head();?>
 </head>
 <body>
@@ -18,7 +30,11 @@
         </label>
         <div class="header_top">
             <div class="header_inner">
-                <h1 class="header_title"><a href="./index.html">＠LIFEハックチャンネル</a></h1>
+                <h1 class="header_title">
+                    <a href="./index.html">
+                        <?php bloginfo("name");?>
+                    </a>
+                </h1>
             </div>
             <form action="#" method="get">
             <input type="text" name="s" value="<?php the_search_query();?>" placeholder="検索">

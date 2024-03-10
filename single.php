@@ -1,6 +1,13 @@
 <?php get_header();?>
     <main>
         <section class="section postbox single">
+            <?php if(!is_front_page()):?>
+                <?php if(function_exists("bcn_display")):?>
+                    <?php bcn_display(); ?>
+                <?php endif;?>
+            <?php endif;?>
+
+
             <?php if(have_posts()):
                     while(have_posts()):
                         the_post();
@@ -13,6 +20,14 @@
                     <h2><?php the_title();?></h2>
                 </div>
                 <div class="single_eyecatching">
+                    <?php
+                        if(has_post_thumbnail()):
+                            $id = get_post_thumbnail_id();
+                            $img = wp_get_attachment_image_src($id);
+                            var_dump($img);
+                    ?>
+                        <img src="<?php echo esc_url($img[0]);?>" />
+                    <?php endif;?>
                 </div>
                 <div class="single_content">
                     <p><?php the_content();?></p>

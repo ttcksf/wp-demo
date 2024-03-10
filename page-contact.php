@@ -1,6 +1,5 @@
 <?php get_header();?>
     <main>
-
         <section class="section contact">
             <div class="contact_inner inner">
                 <h2 class="section_title"><span>お問い合わせ</span></h2>
