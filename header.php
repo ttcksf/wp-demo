@@ -24,7 +24,7 @@
 </head>
 <body>
     <header class="header">
-        <input type="checkbox" id="menu_toggle" class="menu_checkbox">
+        <input type="checkbox" id="menu_toggle" class="menu_checkbox" hidden>
         <label for="menu_toggle" class="menu_hamburger">
             <span class="bar"></span>
         </label>
@@ -42,15 +42,28 @@
         </div>
         <div class="header_bottom">
             <div class="header_inner">
+            <?php
+                $locations = get_nav_menu_locations();
+                $header_menu = wp_get_nav_menu_object($locations["header_nav"]);
+                $header_menu_items = wp_get_nav_menu_items($header_menu->term_id);
+            ?>
                 <nav class="header_nav">
                     <ul class="header_nav-1">
-                        <li><a href="#">ホーム</a></li>
-                        <li><a href="#">ブログ</a></li>
-                        <li><a href="#">プログラミング</a></li>
-                        <li><a href="#">RPA</a></li>
-                        <li><a href="#">メンタル</a></li>
-                        <li><a href="#">キャリア活動</a></li>
-                        <li><a href="#">コンテンツ</a></li>
+                        <!-- 現在のパスを取得して引数の相対パスからURLを作成する -->
+                        <!-- <li><a href="<?php echo esc_url(home_url('/'));?>">ホーム</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/category/js'));?>">ブログ</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/'));?>">プログラミング</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/'));?>">RPA</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/'));?>">メンタル</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/'));?>">キャリア活動</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/'));?>">コンテンツ</a></li> -->
+                        <?php foreach ($header_menu_items as $item) : ?>
+                            <li>
+                                <a href="<?php echo esc_attr($item->url); ?>">
+                                    <?php echo esc_html($item->title); ?>
+                                </a>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
                     <ul class="header_nav-2">
                         <li><a href="#"><span class="sns_icon"><i class="fab fa-instagram"></i></span></a></li>
@@ -59,6 +72,7 @@
                         <li><a href="#"><span class="sns_icon"><i class="fas fa-globe-americas"></i></span></a></li>
                     </ul>
                 </nav>
+                
             </div>
             <div class="header_nav-3">
                 <a href="#"><span class="sns_icon"><i class="fas fa-user-alt"></i></i></span></a>

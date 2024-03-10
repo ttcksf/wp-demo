@@ -238,7 +238,7 @@ textarea {
   z-index: 200;
 }
 .menu_checkbox {
-  display: none;
+  // display: none;
 }
 .menu_checkbox:checked ~ .menu {
   transform: translateX(0);

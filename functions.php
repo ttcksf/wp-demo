@@ -11,4 +11,15 @@
     }
   }
   add_filter("get_the_archive_title", "my_archive");
+
+  function add_custom_menu(){
+    // 外観に「メニュー」を追加する
+    register_nav_menus([
+      // メニュー位置の名称（メニューを作成して保存する）
+      'header_nav' => 'ヘッダーメニュー',
+      'footer_nav' => 'フッターメニュー',
+    ]);
+  }
+  add_action("init", "add_custom_menu");
+  
 ?>

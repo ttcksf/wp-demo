@@ -1,15 +1,27 @@
 <footer class="footer">
         <div class="footer_top">
+            <?php
+                $locations = get_nav_menu_locations();
+                $footer_menu = wp_get_nav_menu_object($locations["footer_nav"]);
+                $footer_menu_items = wp_get_nav_menu_items($footer_menu->term_id);
+            ?>
             <div class="footer_nav">
                 <div class="footer_nav-1">
                     <ul>
-                        <li><a href="#">ホーム</a></li>
+                        <!-- <li><a href="#">ホーム</a></li>
                         <li><a href="#">ブログ</a></li>
                         <li><a href="#">プログラミング</a></li>
                         <li><a href="#">RPA</a></li>
                         <li><a href="#">メンタル</a></li>
                         <li><a href="#">キャリア活動</a></li>
-                        <li><a href="#">コンテンツ</a></li>
+                        <li><a href="#">コンテンツ</a></li> -->
+                        <?php foreach ($footer_menu_items as $item) : ?>
+                            <li>
+                                <a href="<?php echo esc_attr($item->url); ?>">
+                                    <?php echo esc_html($item->title); ?>
+                                </a>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
                 <div class="footer_nav-2">
