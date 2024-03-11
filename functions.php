@@ -22,4 +22,19 @@
   }
   add_action("init", "add_custom_menu");
   
+  function custom_short_code($attr, $content){
+    // return "<p>テスト</p>";
+    // ショートコードのブロックで[test_code]テキスト[/test_code]とする
+    // return "<p>" . $content . "</p>";
+
+    // 投稿画面の中でテンプレートを作ることもできる
+    // [test_code class="test" title="タイトル"]テキスト[/test_code]
+    extract(shortcode_atts([
+      "class" => "test",
+      "title" => "タイトル"
+    ],$attr));
+    return "<p class='$class'>" . $title . ":" . $content . "</p>";
+  }
+  // ショートコードのブロックで「[test_code]」と書く
+  add_shortcode("test_code", "custom_short_code");
 ?>
