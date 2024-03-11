@@ -37,4 +37,5 @@
   }
   // ショートコードのブロックで「[test_code]」と書く
   add_shortcode("test_code", "custom_short_code");
+
 ?>

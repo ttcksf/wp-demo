@@ -1,4 +1,9 @@
 <?php get_header();?>
+    <!-- yoast duplicate post -->
+    <!-- BreadCrumbNavXT -->
+    <!-- Maintenance -->
+    <!-- ログアウトして確認する。ログインしている開発者は見れるため -->
+    <!-- Enable Frontend Loginを外す -->
     <main>
         <section class="section postbox">
             <?php if(!is_front_page()):?>
