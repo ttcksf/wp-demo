@@ -9,8 +9,17 @@
             <div class="postbox_inner inner">
                 <div class="cards">
                     <?php if(have_posts()):
-                        while(have_posts()):
-                            the_post();
+                        $args = [
+                            "orderby" => "date",
+                            "order" => "DESC",
+                            "posts_per_page" => 3,
+                            "post_type" => "post"
+                        ];
+
+                        $query = new WP_Query($args);
+
+                        while($query->have_posts()):
+                            $query->the_post();
                     ?>
                     <div class="card">
                         <a href="<?php the_permalink();?>">
@@ -24,6 +33,7 @@
                         </a>
                     </div>
                     <?php endwhile;?>
+                    <?php wp_reset_postdata();?>
                     <?php else:?>
                         <p>投稿がありません。</p>
                     <?php endif; ?>
