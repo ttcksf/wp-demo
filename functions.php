@@ -1,8 +1,20 @@
 <?php
   function theme_setup(){
     add_theme_support("post-thumbnails");
+    // RSSの配信を有効化する
+    add_theme_support("automatic-feed-links");
   }
   add_action("after_setup_theme", "theme_setup");
+
+  function custom_post_feed($query){
+    if(is_feed()){
+      $post_type = $query->get("post_type");
+      if(empty($post_type)){
+        $query->set("post_type",["news","post"]);
+      }
+    }
+  }
+  add_action("pre_get_posts", "custom_post_feed");
 
   function my_archive($title){
     if(is_tag()){
