@@ -18,12 +18,12 @@
                     <h3><?php the_date();?></h3>
                 </div>
                 <div class="single_title">
-                    <!-- メニューに追加するなら管理画面からカスタムリンクにすれば表示できる -->
-                    <!-- テキストリンクは以下の形 -->
-                    <!-- 一覧ページはアーカイブ設定をTrueにしてarchive-スラッグ.phpを作る -->
-                    <?php var_dump(get_post());?>
                     <p><a href="<?php echo get_post_type_archive_link(get_post()->post_type);?>">お知らせ一覧</a></p>
                     <h2><?php the_title();?></h2>
+
+                    <!-- 自動的にaタグと一緒にテキストが表示される -->
+                    <p>カテゴリー：<?php the_terms(get_the_ID(), "custom-category");?></p>
+                    
                 </div>
                 <div class="single_eyecatching">
                     <?php
