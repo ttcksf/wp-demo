@@ -7,6 +7,8 @@
                 <?php endif;?>
             <?php endif;?>
             <div class="postbox_inner inner">
+                <!-- ターム名をタイトルに使用 -->
+                <h1>お知らせ：<?php single_term_title(); ?></h1>
                 <div class="cards">
                     <?php if(have_posts()):
                         $args = [

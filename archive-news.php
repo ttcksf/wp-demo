@@ -7,17 +7,19 @@
                 <?php endif;?>
             <?php endif;?>
             <div class="postbox_inner inner">
+                <!-- カスタム投稿のラベル名をタイトルにする -->
+                <h1><?php echo esc_html(get_post_type_object(get_post_type())->label); ?></h1>
+
                 <div class="cards">
                     <?php if(have_posts()):
                         $args = [
                             "orderby" => "date",
                             "order" => "DESC",
-                            // カスタム投稿のスラッグにする
                             "post_type" => "news"
                         ];
 
                         $query = new WP_Query($args);
-
+                        
                         while($query->have_posts()):
                             $query->the_post();
                     ?>
