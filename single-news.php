@@ -18,9 +18,11 @@
                     <h3><?php the_date();?></h3>
                 </div>
                 <div class="single_title">
-                    <!-- get_postで基本的な情報は取得できる -->
-                    <!-- 主要な入力項目はカスタム投稿メソッドでも通常メソッドでもどちらでもOK -->
-                    <h2><?php echo get_post()->post_title;?></h2>
+                    <!-- メニューに追加するなら管理画面からカスタムリンクにすれば表示できる -->
+                    <!-- テキストリンクは以下の形 -->
+                    <!-- 一覧ページはアーカイブ設定をTrueにしてarchive-スラッグ.phpを作る -->
+                    <?php var_dump(get_post());?>
+                    <p><a href="<?php echo get_post_type_archive_link(get_post()->post_type);?>">お知らせ一覧</a></p>
                     <h2><?php the_title();?></h2>
                 </div>
                 <div class="single_eyecatching">
