@@ -1,5 +1,12 @@
 <?php get_header();?>
     <main>
+
+    <!-- Custom Post Type UIを使う -->
+    <!-- CPTUI→投稿タイプの追加と編集 -->
+    <!-- スラッグ（URL）を英語、ラベル２箇所（管理画面での表示名）を同じ日本語にする -->
+    <!-- 編集するには「投稿タイプの編集」タブ→選択からラベルを選択する -->
+    <!-- アーカイブはTrue、サポートは必要な入力項目にチェック -->
+    <!-- ラベル名から新規投稿を作成できるようになる -->
         <section class="section postbox">
             <?php if(!is_front_page()):?>
                 <?php if(function_exists("bcn_display")):?>
