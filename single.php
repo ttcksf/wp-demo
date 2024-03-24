@@ -1,8 +1,7 @@
 <?php get_header();?>
     <main>
         <!-- CustomFieldTemplate -->
-        <!-- textareaのlabelを追加して[キー名]を変更して「オプションを更新」で保存 -->
-        <!-- tinyMCEは削除しておく -->
+        <!-- checkboxのlabelを変更して[キー名]を変更してdefaultを削除し「オプションを更新」で保存 -->
 
         <section class="section postbox single">
             <?php if(!is_front_page()):?>
@@ -39,11 +38,17 @@
                 </div>
                 <!-- 取得する値の種類はキー名で見分ける -->
                 <pre>
-                    <?php var_dump(post_custom("LongPlan")); ?>
+                    <?php var_dump(post_custom("CheckBox")); ?>
                 </pre>
-                <?php if(post_custom("LongPlan")):?>
-                  <h4><?php echo esc_html(post_custom("LongPlan"));?></h4>
-                <?php endif;?>
+                <?php if(post_custom("CheckBox")):
+                        $results = post_custom("CheckBox");
+                        foreach($results as $key => $value):
+                ?>
+                  <h4><?php echo esc_html($value);?></h4>
+                <?php 
+                  endforeach;
+                  endif;
+                ?>
             </div>
             <?php endwhile;
                 else:
