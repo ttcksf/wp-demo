@@ -1,7 +1,7 @@
 <?php get_header();?>
     <main>
         <!-- CustomFieldTemplate -->
-        <!-- radioのlabelを追加して[キー名]を変更してvalueを変更してdefaultとclearButtonを削除し「オプションを更新」で保存 -->
+        <!-- selectの[キー名]を変更してvalueを変更してdefaultを削除し「オプションを更新」で保存 -->
 
         <section class="section postbox single">
             <?php if(!is_front_page()):?>
@@ -38,10 +38,11 @@
                 </div>
                 <!-- 取得する値の種類はキー名で見分ける -->
                 <pre>
-                    <?php var_dump(post_custom("Radio")); ?>
+                    <?php var_dump(post_custom("Select")); ?>
                 </pre>
-                <?php if(post_custom("Radio")):?>
-                  <h4><?php echo esc_html(post_custom("Radio"));?></h4>
+                <?php if(post_custom("Select")):?>
+                <!-- 「選択」を選ぶとfalseとして値は出力されない -->
+                  <h4><?php echo esc_html(post_custom("Select"));?></h4>
                 <?php endif;?>
             </div>
             <?php endwhile;
