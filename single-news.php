@@ -1,6 +1,11 @@
 <?php get_header();?>
     <main>
         <section class="section postbox single">
+            <h3><a href="<?php echo get_post_type_archive_link(get_post()->post_type); ?>">お知らせ一覧</a></h3>
+            <!-- 第一引数に投稿ID、第二引数にタクソノミースラッグ -->
+            <!-- <a></a>も含めてカスタム投稿のカテゴリー一覧までのリンクを自動作成 -->
+            <h4>カテゴリー：<?php the_terms(get_the_ID(), "custom-category"); ?></h4>
+
             <?php if(!is_front_page()):?>
                 <?php if(function_exists("bcn_display")):?>
                     <?php bcn_display(); ?>
@@ -17,9 +22,8 @@
                     <h3><?php the_date();?></h3>
                 </div>
                 <div class="single_title">
-                    <h2><?php the_title();?></h2>
-
-                </div>
+                <h2>お知らせ名：<?php the_title();?></h2>
+            </div>
                 <div class="single_eyecatching">
                     <?php
                         if(has_post_thumbnail()):
