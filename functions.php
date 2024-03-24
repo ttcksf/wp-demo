@@ -54,16 +54,25 @@
 
 
   function custom_desc(){
-    // 投稿データを取得
     global $post;
-    // 各投稿をIDで指定した上でカスタムフィールドの値(Description)を取得する。第三引数をtrueにすると文字列で取得することになる(配列はfalse)
     $term = get_post_meta($post->ID, "Description", true);
-    // カスタムフィードのDescriptionキーに値があれば
     if($term){
-      // 変更前、変更後(%sは文字列に置き換える)
       printf('<meta name="description" content="%s" />', esc_html($term));
     }
   }
-  // headタグが作成されるwp_head関数が実行されたときに実行する
   add_action("wp_head", "custom_desc");
+
+  function custom_css(){
+    // 投稿データを取得
+    global $post;
+    // 各投稿をIDで取得してカスタムフィールドのCSSキーの値を取得して文字列として採用
+    $term = get_post_meta($post->ID, "CSS", true);
+    if($term){
+      echo "<style>";
+      echo esc_html($term);
+      echo "</style>";
+    }
+  }
+  // headタグを出力するwp_head関数で実行する
+  add_action("wp_head", "custom_css");
 ?>

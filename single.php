@@ -1,14 +1,21 @@
 <?php get_header();?>
     <main>
         <!-- CustomFieldTemplate -->
+        <!-- テキストを用意する -->
+        <!--
+            [Plan]
+            type = text
+            size = 35
+            label = 短い文章を入れてください。
+        -->
         <!-- 新しくキーと値を作成する -->
         <!-- 
-            [Description]
+            [CSS]
             type = textarea
             rows = 4
             cols = 40
             htmlEditor = true
-            label=メタディスクリプションを入力してください
+            label=CSSを入力してください
          -->
 
         <section class="section postbox single">
@@ -46,14 +53,12 @@
                 </div>
                 <!-- 取得する値の種類はキー名で見分ける -->
                 <pre>
-                    <?php var_dump(wp_get_attachment_image_src(post_custom("File"))); ?>
+                    <?php var_dump((post_custom("Plan"))); ?>
                 </pre>
                 <?php 
-                //   第二引数にサイズを文字列で指定する
-                  $image = wp_get_attachment_image_src(post_custom("File"), "full");
-                  if($image):
+                  if(post_custom("Plan")):
                 ?>
-                  <img src="<?php echo $image[0];?>" alt="">
+                  <h4><?php echo esc_html(post_custom("Plan"));?></h4>
                 <?php endif;?>
             </div>
             <?php endwhile;
