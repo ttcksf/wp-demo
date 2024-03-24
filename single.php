@@ -1,7 +1,8 @@
 <?php get_header();?>
     <main>
         <!-- CustomFieldTemplate -->
-        <!-- selectの[キー名]を変更してvalueを変更してdefaultを削除し「オプションを更新」で保存 -->
+        <!-- selectの[キー名]を変更して「オプションを更新」で保存 -->
+        <!-- PDFやエクセルなどは不可 -->
 
         <section class="section postbox single">
             <?php if(!is_front_page()):?>
@@ -38,11 +39,14 @@
                 </div>
                 <!-- 取得する値の種類はキー名で見分ける -->
                 <pre>
-                    <?php var_dump(post_custom("Select")); ?>
+                    <?php var_dump(wp_get_attachment_image_src(post_custom("File"))); ?>
                 </pre>
-                <?php if(post_custom("Select")):?>
-                <!-- 「選択」を選ぶとfalseとして値は出力されない -->
-                  <h4><?php echo esc_html(post_custom("Select"));?></h4>
+                <?php 
+                //   第二引数にサイズを文字列で指定する
+                  $image = wp_get_attachment_image_src(post_custom("File"), "full");
+                  if($image):
+                ?>
+                  <img src="<?php echo $image[0];?>" alt="">
                 <?php endif;?>
             </div>
             <?php endwhile;
