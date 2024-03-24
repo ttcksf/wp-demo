@@ -1,8 +1,15 @@
 <?php get_header();?>
     <main>
         <!-- CustomFieldTemplate -->
-        <!-- selectの[キー名]を変更して「オプションを更新」で保存 -->
-        <!-- PDFやエクセルなどは不可 -->
+        <!-- 新しくキーと値を作成する -->
+        <!-- 
+            [Description]
+            type = textarea
+            rows = 4
+            cols = 40
+            htmlEditor = true
+            label=メタディスクリプションを入力してください
+         -->
 
         <section class="section postbox single">
             <?php if(!is_front_page()):?>
