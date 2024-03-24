@@ -1,5 +1,11 @@
 <?php get_header();?>
     <main>
+        <!-- CustomFieldTemplate -->
+        <!-- 設定→カスタムフィールドテンプレート -->
+        <!-- テンプレートタイトルを入力（無効化のチェックは外しておく） -->
+        <!-- テンプレートインタラクションは通常の投稿のみを選択 -->
+        <!-- textのlabelを入力して「オプションを更新」で保存 -->
+        <!-- 投稿画面に表示されないときは右上→設定→パネル→カスタムフィールドテンプレートにチェックをいれる -->
         <section class="section postbox single">
             <?php if(!is_front_page()):?>
                 <?php if(function_exists("bcn_display")):?>
@@ -33,6 +39,12 @@
                 <div class="single_content">
                     <p><?php the_content();?></p>
                 </div>
+                <pre>
+                    <?php var_dump(post_custom("Plan")); ?>
+                </pre>
+                <?php if(post_custom("Plan")):?>
+                  <h4><?php echo esc_html(post_custom("Plan"));?></h4>
+                <?php endif;?>
             </div>
             <?php endwhile;
                 else:
