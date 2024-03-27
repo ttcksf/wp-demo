@@ -33,6 +33,13 @@
                 <div class="single_content">
                     <p><?php the_content();?></p>
                 </div>
+
+                <div>
+                    <?php if(post_custom("Text")): ?>
+                        <h4><?php echo esc_html(post_custom("Text")); ?></h4>
+                    <?php endif;?>
+                </div>
+            
             </div>
             <?php endwhile;
                 else:

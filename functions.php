@@ -1,17 +1,14 @@
 <?php
   function theme_setup(){
     add_theme_support("post-thumbnails");
-    // RSSフィードを有効化
     add_theme_support("automatic-feed-links");
   }
   add_action("after_setup_theme", "theme_setup");
 
   function custom_post_feed($query){
     if(is_feed()){
-      // 投稿タイプを探す
       $post_type = $query->get("post_type");
       if(empty($post_type)){
-        // 通常の投稿（post）とカスタム投稿（投稿スラッグ）をRSSに指定する
         $query->set("post_type", ["news","post"]);
       }
     }
@@ -29,9 +26,7 @@
 
 
   function add_custom_menu(){
-    // メニューの操作を管理画面からする宣言
     register_nav_menus([
-      // メニューの位置
       "header_nav" => "ヘッダーメニュー",
       "footer_nav" => "フッターメニュー"
     ]);
@@ -41,7 +36,6 @@
 
 
   function custom_short_code($attr, $content){
-    // デフォルトの属性とテキストを設定
     extract(shortcode_atts([
       "class" => "test",
       "title" => "タイトル"
@@ -51,4 +45,31 @@
   }
 
   add_shortcode("test_code", "custom_short_code");
+
+  function custom_css(){
+    global $post;
+    $term = get_post_meta($post->ID, "CSS", true);
+
+    if($term){
+      echo "<style>";
+      echo esc_html($term);
+      echo "</style>";
+    }
+  }
+  add_action("wp_head", "custom_css");
+
+  function custom_desc(){
+    // 投稿データを取得
+    global $post;
+    // 特定の投稿をIDで指定してフィールドのキー名を文字列として取得する
+    $term = get_post_meta($post->ID, "Description", true);
+
+    if($term){
+      // 変更前、変更後
+      printf('<meta name="description content="%s"/>', esc_html($term));
+    }
+  }
+  // headタグを出力するwp_headで実行する
+  add_action("wp_head", "custom_desc");
+  
 ?>
